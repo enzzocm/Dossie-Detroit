@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 1));
+  pointer-events: none;
+  z-index: 1;
+  transition: transform 0.3s ease;
+  /* Adicione a transição para a propriedade transform */
+  transform: translateY(0);
+  /* Posição inicial */
+}
+
+
+
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #000114;
+}
+
+.area-1,
+.area-2,
+.area-3,
+.seta,
+.conteudo1,
+.menu,
+.indicator,
+.imagem1,
+.imagem2,
+.imagem3,
+.relacionamento,
+.jogabilidadep,
+.conteudo5,
+.requisitos1,
+.requisitos,
+.control,
+.text{
+  visibility: hidden;
+}
+
+section {
+  margin-top: 100px;
+}
+
+.container1 {
+  margin: 0;
+  padding: 0;
+  background-image: url(detroit2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  height: 900px;
+}
+
+.conteudo1 {
+  height: 950px;
+}
+
+.seta {
+  padding-top: 240px;
+}
+
+h1 {
+  font-family: 'Arimo', sans-serif;
+  font-size: 25pt;
+  color: white;
+  margin-left: 300px;
+  margin-top: 200px;
+}
+
+.conteudo1 {
+  height: 330px;
+}
+
+p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15pt;
+  color: white;
+  text-align: justify;
+  margin-left: 300px;
+  margin-right: 300px;
+  padding-top: 30px;
+}
+
+.logo {
+  margin-left: 100px;
+  padding-top: 300px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: transparent;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.menu nav {
+  justify-content: space-around;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+
+}
+
+.menu li+li {
+  margin-left: 9rem;
+}
+
+.menu a {
+  margin-top: 50px;
+  position: relative;
+  text-decoration: none;
+  font-family: 'Arimo', sans-serif;
+  color: #ffffff;
+  font-size: 20pt;
+  display: flex;
+  justify-content: center;
+}
+
+.menu a:after {
+  content: "";
+  position: absolute;
+  background-color: #57b0ff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -14px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #57b0ff;
+}
+
+.menu a:hover:after {
+  width: 100%;
+}
+
+section.slider {
+
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.slider-content {
+  width: 400%;
+  height: auto;
+  display: flex;
+}
+
+.slider-content input {
+  display: none;
+}
+
+.slide-box {
+  width: 25%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  transition: 1s;
+}
+
+.slide-box img {
+  margin-top: 200px;
+  width: 100%;
+}
+
+.nav-manual,
+.nav-auto {
+  position: absolute;
+  width: 100%;
+  margin-top: 55%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-manual .manual-btn,
+.nav-auto div {
+  border: 1px solid #ffffff;
+  padding: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-manual .manual-btn:not(:last-child),
+.nav-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+.nav-manual .manual-btn:hover {
+  background-color: #ffffff;
+}
+
+#radio1:checked~.nav-auto .auto-btn1,
+#radio2:checked~.nav-auto .auto-btn2,
+#radio3:checked~.nav-auto .auto-btn3 {
+  background-color: #ffffff;
+}
+
+#radio1:checked~.primeiro {
+  margin-left: 0%;
+}
+
+#radio2:checked~.primeiro {
+  margin-left: -25%;
+}
+
+#radio3:checked~.primeiro {
+  margin-left: -50%;
+}
+
+.conteudo4 {
+  margin-top: -140px;
+}
+
+.conteudo3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 400px;
+}
+
+.imagem-container {
+  position: relative;
+
+}
+
+.imagem-container img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px black;
+}
+
+.relacionamento {
+  margin-top: 70px;
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px black;
+}
+
+.control{
+  margin-top: 50px;
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px black;
+}
+
+.requisitos {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #00022e;
+  padding: 40px;
+  font-family: 'Arimo', sans-serif;
+  color: white;
+}
+.text{
+  padding-bottom: 40px;
+}
+.requisitos ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.requisitos li {
+  margin-bottom: 10px;
+}
+
+.requisitos h2 {
+  text-align: center;
+}
